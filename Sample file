@@ -1,0 +1,61 @@
+package javaapplicationscannertest;
+//import java.io.BufferedReader;
+//import java.util.HashMap;
+import java.util.Random;
+import java.util.Scanner;
+    public class JavaApplicationScannerTest {
+        public static void main(String[] args) {
+        System.out.println("Scanner is detected form your programm, switch model>>");
+        System.out.println("Enter the number....");
+        int d;
+        Scanner scanner = new Scanner(System.in); // переменная ссылочная ( методы статичные ("или/и") выделение памяти )
+        //new Scanner(System.in); - спец-метода ( конструктор ) (system.in) < откуда брать данные
+        d = scanner.nextInt();
+        if (d <= 10) {
+            System.out.println("Good");
+        } else {
+            System.out.println("Bad");
+        }
+        Scanner scr = new Scanner(System.in);
+        System.out.println("Enter word");
+        String s = scr.nextLine();
+        System.out.println("echo: " + s);
+    
+        Scanner scr2 = new Scanner(System.in);
+            System.out.println("Enter the number");
+            int s1= scr2.nextInt();
+            
+        Scanner scr3 = new Scanner(System.in);
+            System.out.println("True or False");
+        boolean s2 = scr3.nextBoolean();
+          System.out.println("True or False: " + s2);
+          
+          Scanner scr4 = new Scanner(System.in);
+            System.out.println("Продолжите ввод данных");
+            //String s4 = "";
+            String s4 = scr4.nextLine(); 
+            if (s4 == "quality") {
+                System.out.println("Отлично");
+            } else {
+                System.out.println("неккорректная запись");
+                }
+            System.out.println("Enter the number");
+        Scanner scr5 = new Scanner(System.in);
+        int i = 200;
+        if (scr5.hasNextInt()) {
+            System.out.println(scr5.nextInt() + i);
+            System.out.println("Введите число");
+            Scanner scr6 = new Scanner(System.in);
+            while(true) { 
+                if (scr6.hasNextInt()) { // проверка введено ли число
+                    i = scr6.nextInt(); // ввод 
+                    break; // если введено число, цикл прерывается
+                } else {  // если не число, выполняется до тех пор пока не будет введено число
+                      String temp = scr6.nextLine();
+              }
+            }
+            System.out.println("echo: " + i);
+        }
+
+    }
+}
