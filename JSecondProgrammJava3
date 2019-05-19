@@ -1,0 +1,29 @@
+package javaapplicationtestscanner2;
+import java.util.Scanner;
+import java.util.Arrays;
+//import java.util.Random;
+public class JavaApplicationtestscanner2 {
+    public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    int k = scanner.nextInt();
+    System.out.println("Запись переменной в k: " + k);
+    int t = scanner.nextInt();
+    System.out.println("Запись переменной в t: " + t);
+    int n = scanner.nextInt();
+    System.out.println("Запись переменной в n: " + n);
+    int[] arr1 = new int[n];
+    int[] arr2 = new int[n];
+        for (int i = 0; i < arr1.length; i++) {
+            arr1[i] = k * (i - t); 
+            arr2[i] = (k + t - i);
+        }
+        //System.out.println(" ");
+        System.out.println("Вывести массивы");
+        System.out.println(Arrays.toString(arr1));
+        System.out.println(Arrays.toString(arr2));
+  
+           } 
+        }
+    
+
+
