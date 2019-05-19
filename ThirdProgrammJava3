@@ -1,0 +1,27 @@
+package javaapplicationtestscanner3;
+import java.util.Scanner;
+public class JavaApplicationtestscanner3 {
+    public static void main(String[] args) {
+        for (int i = 0; i < 10; i++) {
+            Scanner scanner = new Scanner(System.in);
+            System.out.println("Enter first number");
+            int s = scanner.nextInt();
+            System.out.println("Enter second number");
+            int u = scanner.nextInt();
+            System.out.println("Enter third number");
+            int p = scanner.nextInt();
+            if (s + u + p == 21) {
+                System.out.println("Win");
+                break;
+            } else if (s + u + p > 21) {
+                System.out.println("Lose");
+                break;
+            } else if (s + u + p < 21) {
+                System.out.println("Недобор, переход в следующий раунд");
+                break;
+            }
+
+        }
+    }
+}
+
