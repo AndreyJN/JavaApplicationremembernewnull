@@ -1,0 +1,21 @@
+package javaapplicationtestscanner1;
+import java.util.Scanner;
+public class JavaApplicationtestscanner1 {
+     public static void main(String[] args) {
+       System.out.println("Введите 2 числа");
+       Scanner scanner = new Scanner(System.in);
+       int s = scanner.nextInt();
+       int g = scanner.nextInt();
+       System.out.println("1 число: " + s);
+       System.out.println("1 число: " + g);
+       if (s < 0 && g > 0 || s > 0 && g < 0) { // добавил конструкцию "|| s > 0 && g < 0"
+           System.out.println(s * g);            
+       } else if (s > g) {
+           System.out.println(s - g);
+       } else if (s < 0 && g < 0) {
+           System.out.println(s + g);
+       } else {
+           System.out.println(g % s);
+       }
+     }
+}
